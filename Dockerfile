@@ -37,11 +37,11 @@ RUN python -m venv /py && \
         --no-create-home \
         django-user
 
-# 심볼릭 링크 추가 ##
-RUN ln -sf /py/bin/python /usr/bin/python ## Python 명령어 심볼릭 링크 생성
+# 심볼릭 링크 생성 (필요 시 추가)
+RUN ln -sf /py/bin/python /usr/bin/python
 
-# 가상환경 경로를 PATH에 추가
+# PATH 환경 변수에 가상환경 추가
 ENV PATH="/py/bin:$PATH"
 
-# 권한을 django-user로 변경
+# django-user 권한으로 실행
 USER django-user
