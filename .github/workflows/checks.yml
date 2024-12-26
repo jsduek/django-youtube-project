@@ -13,7 +13,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKER_TOKEN }}  # secrets.본인 레포지토리 key 이름
+          password: ${{ secrets.DOCKERHUB_TOKEN }}  # secrets.본인 레포지토리 key 이름
 
       - name: Install Docker Compose V2
         run: |
